@@ -1,0 +1,99 @@
+/** ==================================== Home Panel ==================================== */
+.product_detail_banner {
+    /* height: 50vh; */
+    box-shadow: 0 20px 30px -19px rgba(108, 25, 241, 0.445);
+    border: 2px solid #eee;
+    border-radius: 15px;
+    background-color: #fff;
+    margin: 120px 25px 0;
+    position: relative;
+    /* padding: 20px; */
+    border: 1px solid #eee;
+    position: relative;
+    overflow: hidden;
+    height: auto;
+  }
+  .product_detail_banner::after {
+    position: absolute;
+    height: 230px;
+    width: 305px;
+    content: "";
+    background: url(/img/right-circle.svg) no-repeat right top 80px;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+  }
+  .product_detail_banner .banner_right_circle {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  .product_description{
+    height: 60px;
+    overflow: hidden;
+    background-color: #dedeee98;
+  }
+  .chart_container {
+    height: 200px;
+  }
+  .chart_container img {
+    object-fit: cover;
+    height: 100%;
+  }
+  .product_img_container {
+    /* width: 100%; */
+  }
+  .product_img_container img {
+    border: 2px solid #eee;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+  .product_content{
+    flex-grow: 1;
+    padding: 10px;
+  }
+  
+  
+  .daily_counter {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 12px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-align: center;
+  }
+  .daily_counter p {
+    display: block;
+  }
+  
+  .product_content_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 25px;
+  }
+  .banner_content_container .xs_font_size {
+    margin-bottom: 10px;
+  }
+  .banner_content_container .input_wrapper {
+    /* max-width: 410px; */
+    margin: 20px auto 10px;
+    overflow: hidden;
+  }
+  .banner_content_container .banner_input {
+    width: calc(100% - 155px);
+    display: inline-block;
+    float: left;
+  }
+  .banner_content_container .primary_btn {
+    max-width: 140px;
+    float: right;
+  }
+  .banner_content_container .info_text {
+    font-size: 12px;
+    opacity: 0.7;
+  }
