@@ -1,42 +1,41 @@
-import ProductCard from "./templates/ProductCard";
-
-export default function Trending() {
+import Filter from "./Filter";
+import PriceCard from "./templates/PriceCard";
+export default function Results() {
   return (
     <section className="features section">
       <div className="container">
         <div className="features-inner section-inner">
           <div className="features-header text-center">
             <div className="container-sm">
-              <h3 className="section-title mt-0">Find Trending Products</h3>
-              <hr/>
-              <p className="section-paragraph">
-                See what's trending in over 50 stores around the world.
-              </p>
+              <h3 className="section-title mt-0">Found 120 products from 6 stores
+              <hr style={{textAlign:"left"}}/>
+              </h3>
             </div>
           </div>
+          <Filter/>
           <div className="trending-products">
-              <ProductCard/>
-              <ProductCard/>
-              <ProductCard/>
-              <ProductCard/>
-              <ProductCard/>
-              <ProductCard/>
-              <ProductCard/>
-              <ProductCard/>
-              <ProductCard/>
-              <ProductCard/>
+            <PriceCard />
+            <PriceCard />
+            <PriceCard />
+            <PriceCard />
+            <PriceCard />
+            <PriceCard />
+            <PriceCard />
+            <PriceCard />
+            <PriceCard />
+            <PriceCard />
           </div>
         </div>
       </div>
       <style jsx>{`
-      .features-section{
-          margin-top:20px;
-      }
-      hr{
-        width: 50px;
-        border-top: 3px solid #4950f6;
-        margin: 10px auto;
-      }
+        .features-section {
+          margin-top: 20px;
+        }
+        hr {
+          width: 50px;
+          border-top: 3px solid #4950f6;
+          margin: 10px auto;
+        }
         .trending-products {
           clear: both;
           padding-top: 25px;

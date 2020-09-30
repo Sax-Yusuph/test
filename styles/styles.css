@@ -330,7 +330,7 @@ header {
 .software-item {
   width: 42px;
   height: 42px;
-  background-color: #4ad0d1;
+  background-color: rgb(212, 212, 212);
   border-radius: 25px;
   transition: all 0.3s ease-in-out;
   cursor: pointer;

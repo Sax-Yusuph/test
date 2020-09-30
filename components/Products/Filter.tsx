@@ -1,20 +1,11 @@
 export default function Filter() {
   return (
     <section className="filter-section">
-      <div className="search-input-wrapper float-l">
-        <h3>Featured Products</h3>
-
-        <div id="clear-search-btn" className="clear-search"></div>
-      </div>
-
       <div id="post-tags-filter-btn" className="primary-btn dark float-r">
         Filter by tags
-        <p id="post-tags-filter-count" className="tag-number">
-          0
-        </p>
       </div>
 
-      <div className="software-list float-r">
+      <div className="software-list">
         <div id="post-software-filter-all" className="software-item active">
           All
         </div>
@@ -46,6 +37,13 @@ export default function Filter() {
           className="software-item studio"
         ></div>
       </div>
+  <style jsx>{`
+    .filter-section{
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+  `}</style>
     </section>
   );
 }
