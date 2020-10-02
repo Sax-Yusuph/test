@@ -116,11 +116,23 @@ header {
   justify-content: center;
   align-items: center;
 }
+.home-banner::before {
+  position: absolute;
+  height: 30%;
+  width: 100%;
+  content: '';
+  background-image: url(/graphbg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
 .home-banner::after {
   position: absolute;
   height: 230px;
   width: 305px;
-  content: "";
+  content: '';
   background: url(/img/right-circle.svg) no-repeat right top 80px;
   right: 0;
   bottom: 0;
@@ -149,6 +161,7 @@ header {
 }
 
 .banner-content-container {
+  z-index: 3;
   text-align: center;
 }
 .banner-content-container .xs-font-size {
@@ -195,7 +208,7 @@ header {
 }
 .trending-card-wrapper.download-btn {
   opacity: 0;
-  width: 100px;
+  width: auto;
   display: inline-block;
   position: absolute;
   right: 15px;
@@ -210,10 +223,15 @@ header {
 }
 .trending-card-img {
   border-radius: 5px 5px 0 0;
-  height: 250px;
+  height: 120px;
   background-color: #bbb9d1;
   width: 100%;
   position: relative;
+}
+@media (min-width: 900px) {
+  .trending-card-img {
+    height: 200px;
+  }
 }
 .trending-card-img img {
   border-top-left-radius: 5px;
@@ -243,7 +261,7 @@ header {
 }
 .trending-card-details .software-item::after {
   background-color: #242e4c;
-  content: "Set alert";
+  content: 'Set alert';
   color: #ffffff;
   font-size: 14px;
   border-radius: 5px;
@@ -278,7 +296,7 @@ header {
   bottom: 25px;
 }
 .trending-card-details .card-title {
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: bold;
   margin-top: 10px;
   margin-bottom: 5px;
@@ -344,17 +362,17 @@ header {
   position: relative;
 }
 
-
 /* suportted stores carousel */
 /* .react-multi-carousel-list{
   position: absolute;
 } */
-.react-multiple-carousel__arrow{
+.react-multiple-carousel__arrow {
   background: linear-gradient(to right, #8e2de2, #4a00e0);
   /* background-color: #4ad0d1 ; */
   box-shadow: 0 12px 12px -11px #0db4afb8;
 }
-react-multi-carousel-list.carousel-container .react-multiple-carousel__arrow:hover{
+react-multi-carousel-list.carousel-container
+  .react-multiple-carousel__arrow:hover {
   background-color: #3dc0c0 !important;
   box-shadow: 0 12px 20px -11px #0db4afb8;
 }

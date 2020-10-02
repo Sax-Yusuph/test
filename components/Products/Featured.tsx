@@ -1,10 +1,10 @@
-import Filter from "./Filter";
-import Carousel from "react-multi-carousel";
+import Filter from './Filter'
+import Carousel from 'react-multi-carousel'
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
     breakpoint: { max: 4000, min: 3000 },
-    items: 3,
+    items: 4,
   },
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
@@ -16,16 +16,16 @@ const responsive = {
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
-    items: 3,
+    items: 2,
   },
-};
+}
 
 export default function FeaturedProducts() {
   return (
-    <div className="featured-section">
-      <section className="featured-carousel-section">
+    <div className='featured-section'>
+      <section className='featured-carousel-section'>
         <h3>Featured Items</h3>
-        <hr/>
+        <hr />
         <Carousel
           ssr={true}
           infinite={true}
@@ -35,37 +35,37 @@ export default function FeaturedProducts() {
           autoPlay={true}
           autoPlaySpeed={4000}
           keyBoardControl={false}
-          customTransition="all .8"
+          customTransition='all .8'
           transitionDuration={500}
-          containerClass="carousel-container"
-          removeArrowOnDeviceType={["desktop", "tablet", "mobile"]}
+          containerClass='carousel-container'
+          removeArrowOnDeviceType={['desktop', 'tablet', 'mobile']}
           //   deviceType={this.props.deviceType}
-          dotListClass="custom-dot-list-style"
-          itemClass="carousel-item-padding-40-px"
+          dotListClass='custom-dot-list-style'
+          itemClass='carousel-item-padding-40-px'
         >
-          <div className="carousel-box">
-            <img width="150px" src="/img/featured/mock-product1.jpg" />
+          <div className='carousel-box'>
+            <img width='150px' src='/img/featured/mock-product1.jpg' />
           </div>
-          <div className="carousel-box">
-            <img width="150px" src="/img/featured/product-mock3.jpg" />
+          <div className='carousel-box'>
+            <img width='150px' src='/img/featured/product-mock3.jpg' />
           </div>
-          <div className="carousel-box">
-            <img width="150px" src="/img/featured/product-mock2.jpg" />
+          <div className='carousel-box'>
+            <img width='150px' src='/img/featured/product-mock2.jpg' />
           </div>
-          <div className="carousel-box">
-            <img width="150px" src="/img/featured/product-mock3.jpg" />
+          <div className='carousel-box'>
+            <img width='150px' src='/img/featured/product-mock3.jpg' />
           </div>
-          <div className="carousel-box">
-            <img width="150px" src="/img/featured/mock-product1.jpg" />
+          <div className='carousel-box'>
+            <img width='150px' src='/img/featured/mock-product1.jpg' />
           </div>
-          <div className="carousel-box">
-            <img width="150px" src="/img/featured/product-mock2.jpg" />
+          <div className='carousel-box'>
+            <img width='150px' src='/img/featured/product-mock2.jpg' />
           </div>
-          <div className="carousel-box">
-            <img width="150px" src="/img/featured/mock-product1.jpg" />
+          <div className='carousel-box'>
+            <img width='150px' src='/img/featured/mock-product1.jpg' />
           </div>
-          <div className="carousel-box">
-            <img width="150px" src="/img/featured/product-mock2.jpg" />
+          <div className='carousel-box'>
+            <img width='150px' src='/img/featured/product-mock2.jpg' />
           </div>
         </Carousel>
       </section>
@@ -74,14 +74,15 @@ export default function FeaturedProducts() {
           border-radius: 6px;
           padding: 0 0 20px;
           width: calc(100vw - 10%);
-          margin: 2rem auto 5rem;
+          margin: 2rem auto 3rem;
         }
-        h3, hr{
+        h3,
+        hr {
           text-align: center;
         }
-        hr{
+        hr {
           width: 50px;
-          border-top: 3px solid #4CAF50;
+          border-top: 3px solid #4caf50;
           margin: 10px auto;
         }
         .featured-carousel-section {
@@ -98,9 +99,7 @@ export default function FeaturedProducts() {
           width: 100%;
           box-shadow: 0 10px 20px -7px rgba(160, 44, 219, 0.07);
         }
-
-
       `}</style>
     </div>
-  );
+  )
 }

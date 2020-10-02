@@ -6,7 +6,7 @@ export default function ProductDetailHeader() {
     <div className={styles.header_bg}></div>
       <section className={styles.product_detail_banner}>
         <div className={styles.chart_container}>
-          <img src="/background1.jpg" width="100%" />
+          <img src="/family.jpg" width="100%" />
         </div>
 
         <div className={styles.product_content_container}>

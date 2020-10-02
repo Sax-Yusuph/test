@@ -8,15 +8,20 @@
     "type-check": "tsc"
   },
   "dependencies": {
+    "axios": "^0.20.0",
+    "cheerio": "^1.0.0-rc.3",
     "next": "latest",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-multi-carousel": "^2.5.5"
+    "react-multi-carousel": "^2.5.5",
+    "uuid": "^8.3.0"
   },
   "devDependencies": {
+    "@types/cheerio": "^0.22.22",
     "@types/node": "^12.12.21",
     "@types/react": "^16.9.16",
     "@types/react-dom": "^16.9.4",
+    "@types/uuid": "^8.3.0",
     "typescript": "4.0"
   },
   "license": "MIT"
