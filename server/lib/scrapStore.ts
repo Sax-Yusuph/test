@@ -8,11 +8,7 @@ export const scrapJumia = (html: string) => {
   const products = $(jumia.products)
   let jumiaProducts: Product[] = []
 
-  // console.log(products.contents().length)
-
-  // fs.writeFileSync('jumia.html', $.html())
-
-  products.each(function (this: CheerioElement) {
+  products.each(function (this: Element) {
     const productName = $(this).find(jumia.productName).text()
     const productLink = $(this).attr('href')
     const productStore =
