@@ -1,13 +1,14 @@
 import { UserRequest } from '../../interfaces'
-import getAllStoresData from './fetchStoresData'
-// import { blockedResourceTypes, skippedResources } from "../utils/resource";
-import { format_res } from './format_res'
+import { format } from './format'
+import { fetchStoresData } from './stores'
 
-export async function getStores(userRequest: UserRequest) {
-  const urls = format_res(userRequest)
-  const storesData = await getAllStoresData(urls.urls, urls.spaUrls)
-  return storesData.flat()
+module.exports = async function crawl(userRequest: UserRequest) {
+	const urls = format(userRequest)
+	const storesData = await Promise.allSettled([
+		...urls.urls.map(fetchStoresData),
+	])
+
+	return storesData.flat()
 }
 
-// path to chrome
-// C:\Users\user\AppData\Local\Google\Chrome\Application\chrome.exe
+//  getSPAStores(urls.spaUrls),

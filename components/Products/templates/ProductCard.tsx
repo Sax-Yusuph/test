@@ -1,29 +1,31 @@
-export default function ProductCard() {
+import { TrendingProduct } from '../../../interfaces'
+
+interface ProductCardProp {
+  product: TrendingProduct
+}
+export default function ProductCard({ product }: ProductCardProp) {
   return (
     <div>
-      <div className="trending-card-wrapper">
+      <div className='trending-card-wrapper'>
         <div
-          className="trending-card-img"
-          style={{ backgroundColor: "rgb(234, 235, 251)" }}
+          className='trending-card-img'
+          style={{ backgroundColor: 'rgb(234, 235, 251)' }}
         >
-          <img
-            src="/img/featured/pumpkin.png"
-            alt="Community Page UI Components UI, designed with Sketch."
-          />
+          <img src={product.imgSrc} alt={product.title} />
         </div>
 
-        <div className="trending-card-details">
-          <div className="software-item sketch"></div>
+        <div className='trending-card-details'>
+          <div className='software-item sketch'></div>
 
-          <p className="card-title">Infinix note 8 pro</p>
-          <p className="details upload-date">25 Sep 2020</p>
-          <h4 className="price">$150.00</h4>
+          <p className='card-title'>{product.title}</p>
+          <p className='details upload-date'>{product.description}</p>
+          <h4 className='price'>{product.price}</h4>
 
-          <div className="download-btn">Check out</div>
+          <div className='download-btn'>Check out</div>
         </div>
-        <div className="inside">
-          <div className="icon">
-            <img width="auto" src="/img/shopping-cart" />
+        <div className='inside'>
+          <div className='icon'>
+            <img width='auto' src='/img/shopping-cart' />
           </div>
         </div>
       </div>
@@ -40,7 +42,7 @@ export default function ProductCard() {
           overflow: hidden;
           background-color: #fff;
         }
-        .software-item{
+        .software-item {
           z-index: 10;
         }
         .icon {
@@ -74,20 +76,20 @@ export default function ProductCard() {
           transform: translateY(-200%);
           transition: opacity 0.2s, transform 0.8s;
         }
-        .price{
-            text-align: left;
-            margin: 0;
-            padding: 0;
-            font-size: .95rem;
+        .price {
+          text-align: left;
+          margin: 0;
+          padding: 0;
+          font-size: 0.95rem;
         }
-        p.details{
-            margin-bottom:0;
-            padding-bottom: 5px;
-            text-align: left;
+        p.details {
+          margin-bottom: 0;
+          padding-bottom: 5px;
+          text-align: left;
         }
       `}</style>
     </div>
-  );
+  )
 }
 
 {

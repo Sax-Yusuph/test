@@ -1,6 +1,11 @@
+import { TrendingProduct } from '../../interfaces'
 import ProductCard from './templates/ProductCard'
 
-export default function Trending() {
+interface Props {
+  trendingProducts: TrendingProduct[]
+}
+
+export default function Trending({ trendingProducts }: Props) {
   return (
     <section className='features section'>
       <div className='container'>
@@ -15,16 +20,20 @@ export default function Trending() {
             </div>
           </div>
           <div className='trending-products'>
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
+            {trendingProducts
+              ? trendingProducts.map((product) => (
+                  <ProductCard product={product} key={product.id} />
+                ))
+              : Array(5).map((i) => (
+                  <div
+                    key={i}
+                    style={{
+                      width: '100%',
+                      height: '300px',
+                      backgroundColor: '#eee',
+                    }}
+                  />
+                ))}
           </div>
         </div>
       </div>
